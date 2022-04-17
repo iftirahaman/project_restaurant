@@ -8,5 +8,7 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <app-message *ngFor="let restaurant of getRestaurants()" [restaurant]="restaurant"></app-message>
+  </ion-list>
 </ion-content>
