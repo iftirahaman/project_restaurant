@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Restaurant } from '../services/data.service'
+import { Restaurant } from '../services/data.service';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -7,7 +7,7 @@ import { Restaurant } from '../services/data.service'
   styleUrls: ['./restaurant-list.component.scss'],
 })
 export class RestaurantListComponent implements OnInit {
-  @Input() restaurant: Restaurant
+  @Input() restaurant: Restaurant;
   constructor() { }
 
   ngOnInit() {}
