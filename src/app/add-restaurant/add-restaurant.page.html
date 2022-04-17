@@ -9,6 +9,15 @@
 
 <ion-content>
   <ion-list>
-    <app-message *ngFor="let restaurant of getRestaurants()" [restaurant]="restaurant"></app-message>
+    <ion-item *ngFor="let res of restaurantData">
+      <ion-label>
+        <h2>{{res.name}}</h2>
+        <h3>{{res.address}}</h3>
+        <h3>{{res.phoneNumber}}</h3>
+      </ion-label>
+      <ion-button color="clear" (click)="addRestaurant(res)">
+        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-list>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, Restaurant } from '../services/data.service';
+import { RestaurantService, Restaurant } from '../services/data.service';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -7,20 +7,21 @@ import { DataService, Restaurant } from '../services/data.service';
   styleUrls: ['./add-restaurant.page.scss'],
 })
 export class AddRestaurantPage implements OnInit {
+  restaurantData = this.restaurantService.getRestaurants();
 
-  constructor(private data: DataService) {}
-
-  refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-    }, 3000);
-  }
+  constructor(private restaurantService: RestaurantService) {}
 
   getRestaurants(): Restaurant[] {
-    return this.data.getRestaurants();
+    return this.restaurantService.getRestaurants();
+  }
+
+  addRestaurant(restaurant: Restaurant) {
+    restaurant.added = true;
+    console.log(restaurant);
   }
 
   ngOnInit() {
+
   }
 
 }
