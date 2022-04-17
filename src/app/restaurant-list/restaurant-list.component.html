@@ -1,3 +1,15 @@
-<p>
-  restaurant-list works!
-</p>
+<ion-item *ngIf="restaurant">
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ restaurant.name }}
+      <span class="date">
+        <ion-note>{{ restaurant.tag }}</ion-note>
+        <ion-icon name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon>
+      </span>
+    </h2>
+    <h3>{{ restaurant.phone_number }}</h3>
+    <p>
+      {{ restaurant.description }}
+    </p>
+  </ion-label>
+</ion-item>
