@@ -1,6 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    
     <ion-title>
       <img src="./assets/restaurant_logo.png" [routerLink]="['/icon']" style="width:20%;height:30%"/>
       Favorite Restaurant
@@ -12,8 +11,29 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar></ion-searchbar>
   <div>
-    <h1>&nbsp;&nbsp;&nbsp;Restaurant List        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+    <h1>&nbsp;&nbsp;&nbsp;Restaurant List        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <ion-icon name="add-outline" item-right [routerLink]="['/add-restaurant']"></ion-icon>
     </h1>
   </div>
+  <ion-list>
+    <ion-item *ngFor="let res of addedRestaurants">
+      <ion-label>
+        <h2>{{res.name}}</h2>
+        <h3>{{res.address}}</h3>
+        <h3>{{res.phoneNumber}}</h3>
+      </ion-label>
+      <ion-button color="clear">
+        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button color="clear">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ionic-rating-component #rating
+          activeColor = "#ff0000"
+          defaultColor = "#aaaaaa"
+          readonly = "false"
+          formControlName="starRating">
+      </ionic-rating-component>
+    </ion-item>
+  </ion-list>
 </ion-content>
