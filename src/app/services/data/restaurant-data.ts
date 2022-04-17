@@ -6,7 +6,7 @@ export const debugHardcodedRestaurantData = [
     description: 'Louisiana-inspired fast-food chain known for its spicy fried chicken, biscuits & sides.',
     tag: ['Chicken', 'Fried', 'Spicy'],
     rating: 3,
-    added: false
+    added: true
   },
   {
     name: 'Big Mao',
@@ -15,7 +15,7 @@ export const debugHardcodedRestaurantData = [
     description: 'Self service restaurant',
     tag: ['Chinese'],
     rating: 4,
-    added: true
+    added: false
   },
   {
     name: 'EAT BKK Thai Kitchen',

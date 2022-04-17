@@ -1,29 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      <img src="./assets/restaurant_logo.png" [routerLink]="['/icon']" style="width:20%;height:30%"/>
-      Favorite Restaurant
-      <ion-button [routerLink]="['/about']" size="small">About</ion-button>
-    </ion-title>
+    <ion-item>
+      <img src="./assets/restaurant_logo.png" slot="start" [routerLink]="['/icon']" style="width:20%;height:30%"/>
+      <ion-label>Favorite Restaurant</ion-label>
+      <ion-button size="large" color="clear" [routerLink]="['/about']">
+        <ion-icon name="finger-print-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-searchbar></ion-searchbar>
-  <div>
-    <h1>&nbsp;&nbsp;&nbsp;Restaurant List        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <ion-icon name="add-outline" item-right [routerLink]="['/add-restaurant']"></ion-icon>
-    </h1>
-  </div>
+  <ion-item>
+    <ion-icon name="add-outline" slot="end" [routerLink]="['/add-restaurant']"></ion-icon>
+    <ion-label>Restaurant List</ion-label>
+  </ion-item>
   <ion-list>
     <ion-item *ngFor="let res of addedRestaurants">
       <ion-label>
         <h2>{{res.name}}</h2>
+        <h3>☆☆☆☆☆</h3>
         <h3>{{res.address}}</h3>
         <h3>{{res.phoneNumber}}</h3>
+        <small *ngFor="let tag of res.tag">#{{tag}}&nbsp;</small>
+        <h1>
+          <ion-button color="clear">
+            <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
+          </ion-button>
+          <ion-button color="clear">
+            <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
+          </ion-button>
+          <ion-button color="clear">
+            <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
+          </ion-button>
+        </h1>
       </ion-label>
       <ion-button color="clear">
-        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+        <ion-icon name="pencil-sharp" slot="icon-only"></ion-icon>
       </ion-button>
       <ion-button color="clear">
         <ion-icon name="trash" slot="icon-only"></ion-icon>
@@ -31,3 +45,13 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<!-- <ion-button color="clear">
+  <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
+</ion-button>
+<ion-button color="clear">
+  <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
+</ion-button>
+<ion-button color="clear">
+  <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
+</ion-button> -->
