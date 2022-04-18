@@ -9,6 +9,7 @@ export interface Restaurant {
   tags: (string) [];
   rating: number;
   added: boolean;
+  imgLink: string;
 }
 
 @Injectable({
