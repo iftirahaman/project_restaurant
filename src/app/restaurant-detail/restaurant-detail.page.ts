@@ -31,7 +31,7 @@ export class RestaurantDetailPage implements OnInit {
 
   shareViaTwitter(name, address){
     this.socialSharing.shareViaTwitter(
-      name, address
+      'Come to ' + name + ', at ' + address
     ).then(() =>{
 
     }).catch(e=>{
@@ -41,7 +41,7 @@ export class RestaurantDetailPage implements OnInit {
 
   shareViaFacebook(name, address){
     this.socialSharing.shareViaFacebook(
-      name, address
+      'Come to ' + name + ', at ' + address
     ).then(() =>{
 
     }).catch(e=>{
