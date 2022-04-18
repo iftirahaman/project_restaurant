@@ -6,7 +6,7 @@ export interface Restaurant {
   address: string;
   phoneNumber: string;
   description: string;
-  tag: (string) [];
+  tags: (string) [];
   rating: number;
   added: boolean;
 }

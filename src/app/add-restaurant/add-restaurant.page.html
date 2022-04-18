@@ -15,7 +15,7 @@
         <h2>{{res.name}}</h2>
         <h3>{{res.address}}</h3>
         <h3>{{res.phoneNumber}}</h3>
-        <small *ngFor="let tag of res.tag">#{{tag}}&nbsp;</small>
+        <small *ngFor="let tag of res.tags">#{{tag}}&nbsp;</small>
       </ion-label>
       <ion-button color="clear" (click)="addRestaurant(res)">
         <ion-icon name="add-outline" slot="icon-only"></ion-icon>

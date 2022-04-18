@@ -11,19 +11,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar></ion-searchbar>
   <ion-item>
     <ion-icon name="add-outline" slot="end" [routerLink]="['/add-restaurant']"></ion-icon>
-    <ion-label>Restaurant List</ion-label>
+    <ion-label><h1>Restaurant List</h1></ion-label>
   </ion-item>
+  <ion-searchbar animated></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let res of addedRestaurants">
-      <ion-label>
+      <ion-label class="ion-text-wrap">
         <h2>{{res.name}}</h2>
-        <h3>☆☆☆☆☆</h3>
+        <h3>☆☆☆☆☆</h3><br>
         <h3>{{res.address}}</h3>
-        <h3>{{res.phoneNumber}}</h3>
-        <small *ngFor="let tag of res.tag">#{{tag}}&nbsp;</small>
+        <h5>{{res.description}}</h5>
+        <small *ngFor="let tag of res.tags">#{{tag}}&nbsp;</small>
         <h1>
           <ion-button color="clear">
             <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
