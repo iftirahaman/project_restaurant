@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from '../services/data.service';
 
 @Component({
   selector: 'app-edit-favorite',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditFavoritePage implements OnInit {
 
-  constructor() { }
+  restaurant: any;
+
+  constructor(
+    private restaurantService: RestaurantService
+  ) { 
+    this.restaurant = this.restaurantService.getNavRestaurant()
+    console.log(this.restaurant)
+  }
 
   ngOnInit() {
   }

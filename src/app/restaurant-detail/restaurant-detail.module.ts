@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RestaurantDetailPageRoutingModule } from './restaurant-detail-routing.module';
 
 import { RestaurantDetailPage } from './restaurant-detail.page';
-
+import { ShowRatingComponent } from '../show-rating/show-rating.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,6 @@ import { RestaurantDetailPage } from './restaurant-detail.page';
     IonicModule,
     RestaurantDetailPageRoutingModule
   ],
-  declarations: [RestaurantDetailPage]
+  declarations: [RestaurantDetailPage, ShowRatingComponent]
 })
 export class RestaurantDetailPageModule {}

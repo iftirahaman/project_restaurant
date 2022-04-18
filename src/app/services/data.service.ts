@@ -17,6 +17,7 @@ export interface Restaurant {
 
 export class RestaurantService {
   public restaurants: Restaurant[] = debugHardcodedRestaurantData;
+  public navRestaurant: any;
 
   constructor() { }
 
@@ -31,4 +32,17 @@ export class RestaurantService {
   public getRestaurantByTag(tags: string): Restaurant{
     return this.restaurants[tags];
   }
+
+  public setNavRestaurant(restaurant){
+    this.navRestaurant = restaurant
+  }
+
+  public getNavRestaurant(){
+    return this.navRestaurant
+  }
+
+  // public changeAdded(added: boolean, name: string): Restaurant{
+  //   this.restaurants[name].added = added
+  //   return this.restaurants[name].added
+  // }
 }

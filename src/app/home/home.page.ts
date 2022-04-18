@@ -23,4 +23,18 @@ export class HomePage {
     this.route.navigate(['/home']);
   }
 
+  directEdit(restaurant){
+    this.restaurantService.setNavRestaurant(restaurant)
+    this.route.navigate(['/edit-favorite'])
+  }
+
+  directDetail(restaurant){
+    this.restaurantService.setNavRestaurant(restaurant)
+    this.route.navigate(['/restaurant-detail'])
+  }
+
+  // updateAdded(added, name){
+  //   this.restaurantService.changeAdded(added,name)
+  // }
+
 }

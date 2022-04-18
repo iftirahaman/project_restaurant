@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Restaurant } from '../services/data.service';
-
+import { RestaurantService } from '../services/data.service';
 @Component({
   selector: 'app-restaurant-detail',
   templateUrl: './restaurant-detail.page.html',
@@ -8,10 +7,13 @@ import { Restaurant } from '../services/data.service';
 })
 export class RestaurantDetailPage implements OnInit {
 
-  @Input()
-  restaurant: Restaurant;
+  restaurant: any;
 
-  constructor() { }
+  constructor(
+    private restaurantService: RestaurantService
+    ) { 
+    this.restaurant = this.restaurantService.getNavRestaurant()
+  }
 
   ngOnInit() {
   }
