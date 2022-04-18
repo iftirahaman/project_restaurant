@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestaurantService } from '../services/data.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -32,6 +31,8 @@ export class HomePage {
     this.restaurantService.setNavRestaurant(restaurant)
     this.route.navigate(['/restaurant-detail'])
   }
+
+ 
 
   // updateAdded(added, name){
   //   this.restaurantService.changeAdded(added,name)

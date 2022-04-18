@@ -7,7 +7,7 @@ export const debugHardcodedRestaurantData = [
     tags: ['Chicken', 'Fried', 'Spicy'],
     rating: 3,
     added: false,
-    imgLink:'./assets/Popeyes Lusiana Kitchin.png'
+    imgLink:'./assets/Popeyes Louisiana Kitchen.png'
   },
   {
     name: 'Big Mao',
@@ -27,7 +27,7 @@ export const debugHardcodedRestaurantData = [
     tags: ['Thai'],
     rating: 2,
     added: true,
-  imgLink:'./assets/Eay BKK Thai Kitchen.png'
+  imgLink:'./assets/EAT BKK Thai Kitchen.png'
   },
   {
     name: 'TOKYO GRILL',
