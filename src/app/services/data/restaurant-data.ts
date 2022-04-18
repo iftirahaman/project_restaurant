@@ -35,4 +35,5 @@ export const debugHardcodedRestaurantData = [
     rating: 6,
     added: false
   },
+  
 ];
