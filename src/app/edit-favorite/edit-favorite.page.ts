@@ -12,9 +12,9 @@ export class EditFavoritePage implements OnInit {
 
   constructor(
     private restaurantService: RestaurantService
-  ) { 
-    this.restaurant = this.restaurantService.getNavRestaurant()
-    console.log(this.restaurant)
+  ) {
+    this.restaurant = this.restaurantService.getNavRestaurant();
+    console.log(this.restaurant);
   }
 
   ngOnInit() {

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { Drivers, Storage } from '@ionic/storage';
+import { Drivers } from '@ionic/storage';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 
@@ -15,6 +15,10 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 import { SafePipe } from './safe.pipe';
 
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
+
 @NgModule({
   declarations: [AppComponent, SafePipe],
   entryComponents: [],
@@ -22,7 +26,7 @@ import { SafePipe } from './safe.pipe';
     IonicStorageModule.forRoot({
     name: '__restaurantDb',
     // eslint-disable-next-line no-underscore-dangle
-    driverOrder: [CordovaSQLiteDriver._driver, Drivers.IndexedDB, Drivers.LocalStorage]
+    driverOrder: [CordovaSQLiteDriver._driver, Drivers.IndexedDB, Drivers.LocalStorage, RouterModule.forRoot(routes)]
   }), IonicModule.forRoot(), AppRoutingModule],
   providers: [SocialSharing, EmailComposer,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { RestaurantService } from '../services/data.service';
+import { Restaurant, RestaurantService } from '../services/data.service';
 @Component({
   selector: 'app-restaurant-detail',
   templateUrl: './restaurant-detail.page.html',
@@ -9,13 +9,13 @@ import { RestaurantService } from '../services/data.service';
 })
 export class RestaurantDetailPage implements OnInit {
 
-  restaurant: any;
+  restaurant: Restaurant;
 
   constructor(
     private restaurantService: RestaurantService,
     private emailComposer: EmailComposer,
     private socialSharing: SocialSharing
-    ) {
+  ) {
     this.restaurant = this.restaurantService.getNavRestaurant();
   }
 
