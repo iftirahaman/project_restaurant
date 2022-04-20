@@ -40,7 +40,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Tokyo Grill.png'
   },
   {
-    name: 'Rodney’s Oyster House',
+    name: 'Rodney`s Oyster House',
     address: '469 King St W, Toronto, ON M5V 1K4',
     phoneNumber: '(416)-363-8105',
     description: 'Longtime, casual eatery specializing in oysters & seasonal seafood dishes, plus drinks.',
@@ -119,5 +119,4 @@ export const debugHardcodedRestaurantData = [
     added: false,
     imgLink:'./assets/360 Restuarant at the CN Tower.png'
   },
-
 ];
