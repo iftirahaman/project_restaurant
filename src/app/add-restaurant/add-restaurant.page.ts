@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestaurantService, Restaurant } from '../services/data.service';
 import { StorageService } from '../services/restauraunt/storage.service';
-
-
 @Component({
   selector: 'app-add-restaurant',
   templateUrl: './add-restaurant.page.html',
@@ -24,6 +22,11 @@ export class AddRestaurantPage implements OnInit {
     // restaurant.added = true;
     this.router.navigate(['']);
     console.log(restaurant);
+  }
+
+  directEdit(restaurant: Restaurant){
+    this.restaurantService.setNavRestaurant(restaurant);
+    this.router.navigate(['/edit-favorite']);
   }
 
   ngOnInit() {

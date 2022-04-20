@@ -39,6 +39,10 @@ export class RatingComponent implements OnInit{
   isAboveRating(index: number): boolean {
     return index > this.rating
   }
+
+  getRate(){
+    return this.rating;
+  }
 }
 
 enum COLORS{
