@@ -15,8 +15,8 @@ export class RestaurantDetailPage implements OnInit {
     private restaurantService: RestaurantService,
     private emailComposer: EmailComposer,
     private socialSharing: SocialSharing
-    ) { 
-    this.restaurant = this.restaurantService.getNavRestaurant()
+    ) {
+    this.restaurant = this.restaurantService.getNavRestaurant();
   }
 
   // shareViaEmail(name, address){
@@ -52,8 +52,8 @@ export class RestaurantDetailPage implements OnInit {
   ngOnInit() {
   }
 
-  
 
-  
+
+
 
 }

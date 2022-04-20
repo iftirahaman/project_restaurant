@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { debugHardcodedRestaurantData } from './data/restaurant-data';
 
 export interface Restaurant {
+  id: string;
   name: string;
   address: string;
   phoneNumber: string;

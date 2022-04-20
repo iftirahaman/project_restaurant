@@ -200,7 +200,8 @@ export const debugHardcodedRestaurantData = [
     tags: ['Fish','Chips','Fried'],
     rating: 4,
     added: false,
-    imgLink:'./assets/Halibut House Fish and Chips.png'
+    imgLink:'./assets/Halibut House Fish and Chips.png',
+    mapLink: ''
   },
   {
     id: '18',
@@ -211,7 +212,8 @@ export const debugHardcodedRestaurantData = [
     tags: ['Tea','Bubble','Drink'],
     rating: 4,
     added: false,
-    imgLink:'.src/assets/Real Fruit Bubble Tea.png'
+    imgLink:'.src/assets/Real Fruit Bubble Tea.png',
+    mapLink: ''
   },
   {
     id: '19',
@@ -222,7 +224,8 @@ export const debugHardcodedRestaurantData = [
     tags: ['Sandwich','Salad','Healthy'],
     rating: 4,
     added: false,
-    imgLink:'src/assets/Subway.png'
+    imgLink:'src/assets/Subway.png',
+    mapLink: ''
   },
   {
     id: '20',
