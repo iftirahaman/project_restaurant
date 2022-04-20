@@ -3,7 +3,7 @@
     <ion-item>
       <img src="./assets/restaurant_logo.png" slot="start" [routerLink]="['/icon']" style="width:20%;height:30%"/>
       <ion-label>Favorite Restaurant</ion-label>
-      <ion-button size="large" color="clear" [routerLink]="['/about']">
+      <ion-button size="large" [routerLink]="['/about']">
         <ion-icon name="finger-print-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-item>
@@ -18,28 +18,17 @@
   <ion-searchbar animated></ion-searchbar>
   <ion-list >
     <ion-item *ngFor="let res of addedRestaurants" >
-      <ion-label class="ion-text-wrap">
-        <h2  (click)="directDetail(res)">{{res.name}}</h2>
-        <app-show-rating [rating]="res.rating"  (click)="directDetail(res)"></app-show-rating>
-        <h3  (click)="directDetail(res)">{{res.address}}</h3>
-        <h5  (click)="directDetail(res)">{{res.description}}</h5>
-        <small *ngFor="let tag of res.tags"  (click)="directDetail(res)">#{{tag}}&nbsp;</small>
-        <h1>
-          <ion-button color="clear">
-            <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
-          </ion-button>
-          <ion-button color="clear">
-            <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
-          </ion-button>
-          <ion-button color="clear" (click)="shareViaEmail()">
-            <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
-          </ion-button>
-        </h1>
+      <ion-label class="ion-text-wrap" (click)="directDetail(res)">
+        <h2>{{res.name}}</h2>
+        <app-show-rating [rating]="res.rating"></app-show-rating>
+        <h3>{{res.address}}</h3>
+        <h5>{{res.description}}</h5>
+        <small *ngFor="let tag of res.tags">#{{tag}}&nbsp;</small>
       </ion-label>
-      <ion-button color="clear" (click)="directEdit(res)">
+      <ion-button (click)="directEdit(res)">
         <ion-icon name="pencil-sharp" slot="icon-only" ></ion-icon>
       </ion-button>
-      <ion-button color="clear" >
+      <ion-button >
         <ion-icon name="trash" slot="icon-only" ></ion-icon>
       </ion-button>
     </ion-item>

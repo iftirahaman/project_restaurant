@@ -8,13 +8,15 @@ import { RestaurantDetailPageRoutingModule } from './restaurant-detail-routing.m
 
 import { RestaurantDetailPage } from './restaurant-detail.page';
 import { ShowRatingComponent } from '../show-rating/show-rating.component';
+import { SharedPipesModule } from '../safe.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    RestaurantDetailPageRoutingModule
+    RestaurantDetailPageRoutingModule,
+    SharedPipesModule
   ],
   declarations: [RestaurantDetailPage, ShowRatingComponent]
 })
