@@ -10,6 +10,7 @@ export interface Restaurant {
   rating: number;
   added: boolean;
   imgLink: string;
+  mapLink: string;
 }
 
 @Injectable({

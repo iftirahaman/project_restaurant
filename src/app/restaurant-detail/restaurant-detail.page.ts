@@ -19,28 +19,28 @@ export class RestaurantDetailPage implements OnInit {
     this.restaurant = this.restaurantService.getNavRestaurant()
   }
 
-  shareViaEmail(name, address){
-    let email={
-      to: 'mybestfriend@friend.com',
-      subject: name+ ' is the best restaurant!',
-      body: 'You have to come to '+address+', and try this restaurant!'
-    }
+  // shareViaEmail(name, address){
+  //   let email={
+  //     to: 'mybestfriend@friend.com',
+  //     subject: name+ ' is the best restaurant!',
+  //     body: 'You have to come to '+address+', and try this restaurant!'
+  //   }
 
-    this.emailComposer.open(email);
-  };
+  //   this.emailComposer.open(email);
+  // };
 
-  shareViaTwitter(name, address){
-    this.socialSharing.shareViaTwitter(
-      'Come to ' + name + ', at ' + address
-    ).then(() =>{
+  // shareViaTwitter(name, address){
+  //   this.socialSharing.shareViaTwitter(
+  //     'Come to ' + name + ', at ' + address
+  //   ).then(() =>{
 
-    }).catch(e=>{
+  //   }).catch(e=>{
 
-    })
-  };
+  //   })
+  // };
 
-  shareViaFacebook(name, address){
-    this.socialSharing.shareViaFacebook(
+  share(name, address){
+    this.socialSharing.share(
       'Come to ' + name + ', at ' + address
     ).then(() =>{
 

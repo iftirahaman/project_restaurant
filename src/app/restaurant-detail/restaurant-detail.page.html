@@ -17,14 +17,15 @@
   <h3>{{ restaurant.description }}</h3>
   <small *ngFor="let tag of restaurant.tags">#{{tag}}&nbsp;</small>
 
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="50%" height="50%" id="gmap_canvas" [src]= "restaurant.mapLink | safe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:left;height:250px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
   <h1>
-    <ion-button color="clear" (click)="shareViaFacebook(restaurant.name,restaurant.address)">
+    <ion-button (click)="share(restaurant.name,restaurant.address)">
       <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
     </ion-button>
-    <ion-button color="clear" (click)="shareViaTwitter(restaurant.name,restaurant.address)">
+    <ion-button (click)="share(restaurant.name,restaurant.address)">
       <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
     </ion-button>
-    <ion-button color="clear" (click)="shareViaEmail(restaurant.name,restaurant.address)">
+    <ion-button (click)="share(restaurant.name,restaurant.address)">
       <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
     </ion-button>
   </h1>

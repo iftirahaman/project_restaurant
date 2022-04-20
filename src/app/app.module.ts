@@ -13,8 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
+import { SafePipe } from './safe.pipe';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SafePipe],
   entryComponents: [],
   imports: [BrowserModule,
     IonicStorageModule.forRoot({
