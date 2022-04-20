@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Restaurant, RestaurantService } from '../services/data.service';
