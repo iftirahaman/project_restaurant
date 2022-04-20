@@ -9,21 +9,22 @@
 
 <ion-content *ngIf="restaurant">
 
+  <img src={{restaurant.imgLink}} style="width:300px;height:300px"/>
   <h2>{{ restaurant.name }}</h2>
   <h3>{{ restaurant.address }}</h3>
   <h3>{{ restaurant.phoneNumber }}</h3>
   <app-show-rating [rating]="restaurant.rating"></app-show-rating>
   <h3>{{ restaurant.description }}</h3>
-  <large *ngFor="let tag of restaurant.tags">#{{tag}}&nbsp;</large>
+  <small *ngFor="let tag of restaurant.tags">#{{tag}}&nbsp;</small>
 
   <h1>
-    <ion-button color="clear">
+    <ion-button color="clear" (click)="shareViaFacebook(restaurant.name,restaurant.address)">
       <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
     </ion-button>
-    <ion-button color="clear">
+    <ion-button color="clear" (click)="shareViaTwitter(restaurant.name,restaurant.address)">
       <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
     </ion-button>
-    <ion-button color="clear">
+    <ion-button color="clear" (click)="shareViaEmail(restaurant.name,restaurant.address)">
       <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
     </ion-button>
   </h1>

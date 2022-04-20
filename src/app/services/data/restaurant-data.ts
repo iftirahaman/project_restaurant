@@ -7,7 +7,7 @@ export const debugHardcodedRestaurantData = [
     tags: ['Chicken', 'Fried', 'Spicy'],
     rating: 3,
     added: false,
-    imgLink:'./assets/Popeyes Lusiana Kitchin.png'
+    imgLink:'./assets/Popeyes Louisiana Kitchen.png'
   },
   {
     name: 'Big Mao',
@@ -27,7 +27,7 @@ export const debugHardcodedRestaurantData = [
     tags: ['Thai'],
     rating: 2,
     added: true,
-  imgLink:'./assets/Eay BKK Thai Kitchen.png'
+  imgLink:'./assets/EAT BKK Thai Kitchen.png'
   },
   {
     name: 'TOKYO GRILL',
@@ -45,7 +45,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(416)-363-8105',
     description: 'Longtime, casual eatery specializing in oysters & seasonal seafood dishes, plus drinks.',
     tags: ['Oyster', 'Dine-in', 'Curbside'],
-    rating: 4.6,
+    rating: 5.0,
     added: false,
     imgLink:'./assets/Rodneys Oyster House.png'
   },
@@ -55,7 +55,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(647)-439-4065',
     description: 'Mexican outlet with limited seating offering sizable meat, seafood & vegetarian burritos.',
     tags: ['Buritto', 'Boys', 'Seafood'],
-    rating: 4.4,
+    rating: 4.0,
     added: false,
     imgLink:'./assets/Rodneys Oyster House.png'
   },
@@ -65,7 +65,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(416)-477-5647',
     description: 'Contemporary Italian restaurant offering arancini, pasta dishes & pizzas, plus cocktails.',
     tags: ['Itailian','Pizza','Dishes'],
-    rating: 4.5,
+    rating: 5.0,
     added: false,
     imgLink:'./assets/Gusto 501.png'
   },
@@ -75,7 +75,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(416)0-368-7190',
     description: 'Well-known fast-food chain serving grilled burgers, fries & shakes.',
     tags: ['Burgers','fries ','grilled'],
-    rating: 4.1,
+    rating: 4.0,
     added: false,
     imgLink:'./assets/Burger King.png'
   },
@@ -85,7 +85,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(416)-751-9014',
     description: 'Classic, long-running fast-food chain known for its burgers & fries.',
     tags: ['Burgers','fries ','cheese'],
-    rating: 3.8,
+    rating: 4.0,
     added: false,
     imgLink:'./assets/McDonalds.png'
   },
@@ -95,7 +95,7 @@ export const debugHardcodedRestaurantData = [
     phoneNumber: '(416)-267-8852',
     description: 'Canadian chain selling signature premium-blend coffee, plus light fare like pastries & panini.',
     tags: ['Coffee','pastries ','tea'],
-    rating: 3.8,
+    rating: 4.0,
     added: false,
     imgLink:'./assets/Tim Hortons.png'
   },
@@ -118,5 +118,85 @@ export const debugHardcodedRestaurantData = [
     rating: 4.0,
     added: false,
     imgLink:'./assets/360 Restuarant at the CN Tower.png'
+  },
+  {
+    name: 'Alo',
+    address: '163 Spadina Ave., Toronto, ON M5V 2L6',
+    phoneNumber: '(416)-260-2222',
+    description: 'French tasting menu served in stylish, serene surrounds atop a Victorian building.',
+    tags: ['French','Victorian','stylish'],
+    rating: 5.0,
+    added: false,
+    imgLink:'./assets/Alo.png'
+  },
+  {
+    name: 'A&W Canada',
+    address: 'Centre, 45 Overlea Blvd Unit #4, Toronto, ON M4H 1C3',
+    phoneNumber: '(647)-748-0036',
+    description: 'Fast-food outlet serving up namesake root beer & floats, plus burgers, chicken & fries.',
+    tags: ['Chicken','Burger','Fries'],
+    rating: 4,
+    added: false,
+    imgLink:'./assets/A&W.png'
+  },
+  {
+    name: 'Chester Fried Chicken',
+    address: '45 Overlea Blvd, Toronto, ON M4H 1C3',
+    phoneNumber: '(416)-423-7810',
+    description: 'A fried chicken restuarant',
+    tags: ['Chicken','Burger','Fries'],
+    rating: 4.0,
+    added: false,
+    imgLink:'./assets/Chesters Fried Chicken.png'
+  },
+  {
+    name: 'Wendys',
+    address: '2908 Ellesmere Rd, Scarborough, ON M1E 4B8',
+    phoneNumber: '(416)-208-9902',
+    description: 'Fast-food burger chain serving sides such as chili & baked potatoes.',
+    tags: ['Sides','Burger','Chili'],
+    rating: 4.0,
+    added: false,
+    imgLink:'./assets/Chesters Fried Chicken.png'
+  },
+  {
+    name: 'Halibut House Fish and Chips Inc.',
+    address: '3003 Danforth Ave, Scarborough, ON M1M 1R4',
+    phoneNumber: '(416)-691-8889',
+    description: 'Fish and Chips place',
+    tags: ['Fish','Chips','Fried'],
+    rating: 4.0,
+    added: false,
+    imgLink:'./assets/Halibut House Fish and Chips.png'
+  },
+  {
+    name: 'Real Fruit Bubble Tea',
+    address: '3003 Danforth Ave Unit D5, East York, ON M4C 1M9',
+    phoneNumber: '(888)-896-1829',
+    description: 'Bubble Tea and Drink Restuarant',
+    tags: ['Tea','Bubble','Drink'],
+    rating: 4.0,
+    added: false,
+    imgLink:'.src/assets/Real Fruit Bubble Tea.png'
+  },
+  {
+    name: 'Subway',
+    address: '3003 Danforth Ave #47, Toronto, ON M4C 1M9',
+    phoneNumber: '(416)693-9018',
+    description: 'Casual counter-serve chain for build-your-own sandwiches & salads, with health-conscious options.',
+    tags: ['Sandwich','Salad','Healthy'],
+    rating: 4.0,
+    added: false,
+    imgLink:'src/assets/Subway.png'
+  },
+  {
+    name: 'Starbucks',
+    address: '604 Danforth Ave, Toronto, ON M4K 1R1',
+    phoneNumber: '(416)693-9018',
+    description: 'Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.',
+    tags: ['Roasts','Light Bite','Coffee'],
+    rating: 4.0,
+    added: false,
+    imgLink:'./assets/Starbucks.png'
   },
 ];
