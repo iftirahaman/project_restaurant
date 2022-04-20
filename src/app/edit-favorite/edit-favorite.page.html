@@ -16,6 +16,6 @@
   <rating></rating>
   <h3>{{ restaurant.description }}</h3>
   <ion-label>Description</ion-label>
-  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
-  <ion-button>Save</ion-button>
+  <ion-textarea [(ngModel)]="description" rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+  <ion-button (click)="addRestaurant(restaurant,description)" [routerLink]="['../']">Save</ion-button>
 </ion-content>

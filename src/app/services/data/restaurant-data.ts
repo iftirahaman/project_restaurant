@@ -201,7 +201,7 @@ export const debugHardcodedRestaurantData = [
     rating: 4,
     added: false,
     imgLink:'./assets/Halibut House Fish and Chips.png',
-    mapLink: ''
+    mapLink: 'https://maps.google.com/maps?q=3003%20Danforth%20Ave,%20Scarborough&t=&z=13&ie=UTF8&iwloc=&output=embed'
   },
   {
     id: '18',
@@ -213,7 +213,7 @@ export const debugHardcodedRestaurantData = [
     rating: 4,
     added: false,
     imgLink:'.src/assets/Real Fruit Bubble Tea.png',
-    mapLink: ''
+    mapLink: 'https://maps.google.com/maps?q=3003%20Danforth%20Ave,%20Scarborough&t=&z=13&ie=UTF8&iwloc=&output=embed'
   },
   {
     id: '19',
@@ -225,7 +225,7 @@ export const debugHardcodedRestaurantData = [
     rating: 4,
     added: false,
     imgLink:'src/assets/Subway.png',
-    mapLink: ''
+    mapLink: 'https://maps.google.com/maps?q=3003%20Danforth%20Ave,%20Scarborough&t=&z=13&ie=UTF8&iwloc=&output=embed'
   },
   {
     id: '20',
