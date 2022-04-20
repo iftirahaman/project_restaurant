@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { RestaurantService } from '../services/data.service';
+import { Restaurant, RestaurantService } from '../services/data.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -22,17 +22,16 @@ export class HomePage {
     this.route.navigate(['/home']);
   }
 
-  directEdit(restaurant){
-    this.restaurantService.setNavRestaurant(restaurant)
-    this.route.navigate(['/edit-favorite'])
+  directEdit(restaurant: Restaurant){
+    this.restaurantService.setNavRestaurant(restaurant);
+    this.route.navigate(['/edit-favorite']);
   }
 
-  directDetail(restaurant){
-    this.restaurantService.setNavRestaurant(restaurant)
-    this.route.navigate(['/restaurant-detail'])
+  directDetail(restaurant: Restaurant){
+    this.restaurantService.setNavRestaurant(restaurant);
+    this.route.navigate(['/restaurant-detail']);
   }
 
- 
 
   // updateAdded(added, name){
   //   this.restaurantService.changeAdded(added,name)

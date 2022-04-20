@@ -1,5 +1,6 @@
 export const debugHardcodedRestaurantData = [
   {
+    id: '1',
     name: 'Popeyes Louisiana Kitchen',
     address: '4841 Yonge St Unit# 206, Toronto, ON M2N 5Y7',
     phoneNumber: '(647) 343-5262',
@@ -10,6 +11,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Popeyes Louisiana Kitchen.png'
   },
   {
+    id: '2',
     name: 'Big Mao',
     address: '5519 Yonge St, North York, ON M2N 5S3',
     phoneNumber: '(416) 551-6686',
@@ -20,6 +22,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Big Mao.png'
   },
   {
+    id: '3',
     name: 'EAT BKK Thai Kitchen',
     address: '4704 Yonge St, North York, ON M2N 5M4',
     phoneNumber: '(647) 352-8989',
@@ -30,6 +33,7 @@ export const debugHardcodedRestaurantData = [
   imgLink:'./assets/EAT BKK Thai Kitchen.png'
   },
   {
+    id: '4',
     name: 'TOKYO GRILL',
     address: '5175 Yonge St, North York, ON M2N 5P5',
     phoneNumber: '(647) 748-6700',
@@ -40,6 +44,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Tokyo Grill.png'
   },
   {
+    id: '5',
     name: 'Rodney`s Oyster House',
     address: '469 King St W, Toronto, ON M5V 1K4',
     phoneNumber: '(416)-363-8105',
@@ -50,6 +55,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Rodneys Oyster House.png'
   },
   {
+    id: '6',
     name: 'Burrito Boyz',
     address: '224 Adelaide St W, Toronto, ON M5H 1W7',
     phoneNumber: '(647)-439-4065',
@@ -60,6 +66,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Rodneys Oyster House.png'
   },
   {
+    id: '7',
     name: 'Gusto 501',
     address: '501 King St E, Toronto, ON M5A 1L9',
     phoneNumber: '(416)-477-5647',
@@ -70,6 +77,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Gusto 501.png'
   },
   {
+    id: '8',
     name: 'Burger King',
     address: '7243 Yonge St, Toronto, ON M5B 1N8',
     phoneNumber: '(416)0-368-7190',
@@ -80,6 +88,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Burger King.png'
   },
   {
+    id: '9',
     name: 'McDonalds',
     address: '3150 St Clair Ave E, Scarborough, ON M1L 1V6',
     phoneNumber: '(416)-751-9014',
@@ -90,6 +99,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/McDonalds.png'
   },
   {
+    id: '10',
     name: 'Tim Hortons',
     address: '3090 Kingston Rd, Scarborough, ON M1M 1P2',
     phoneNumber: '(416)-267-8852',
@@ -100,6 +110,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Tim Hortons.png'
   },
   {
+    id: '11',
     name: 'Dairy Queen Grill & Chill',
     address: '1040 Broadview Ave, Toronto, ON M4K 2S2',
     phoneNumber: '(416)-425-2261',
@@ -110,6 +121,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Dairy Queen.png'
   },
   {
+    id: '12',
     name: '360 The Restaurant at the CN Tower',
     address: '1040 Broadview Ave, Toronto, ON M4K 2S2',
     phoneNumber: '(416)-362-5411',
@@ -120,6 +132,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/360 Restuarant at the CN Tower.png'
   },
   {
+    id: '13',
     name: 'Alo',
     address: '163 Spadina Ave., Toronto, ON M5V 2L6',
     phoneNumber: '(416)-260-2222',
@@ -130,6 +143,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Alo.png'
   },
   {
+    id: '14',
     name: 'A&W Canada',
     address: 'Centre, 45 Overlea Blvd Unit #4, Toronto, ON M4H 1C3',
     phoneNumber: '(647)-748-0036',
@@ -140,6 +154,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/A&W.png'
   },
   {
+    id: '15',
     name: 'Chester Fried Chicken',
     address: '45 Overlea Blvd, Toronto, ON M4H 1C3',
     phoneNumber: '(416)-423-7810',
@@ -150,6 +165,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Chesters Fried Chicken.png'
   },
   {
+    id: '16',
     name: 'Wendys',
     address: '2908 Ellesmere Rd, Scarborough, ON M1E 4B8',
     phoneNumber: '(416)-208-9902',
@@ -160,6 +176,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Chesters Fried Chicken.png'
   },
   {
+    id: '17',
     name: 'Halibut House Fish and Chips Inc.',
     address: '3003 Danforth Ave, Scarborough, ON M1M 1R4',
     phoneNumber: '(416)-691-8889',
@@ -170,6 +187,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'./assets/Halibut House Fish and Chips.png'
   },
   {
+    id: '18',
     name: 'Real Fruit Bubble Tea',
     address: '3003 Danforth Ave Unit D5, East York, ON M4C 1M9',
     phoneNumber: '(888)-896-1829',
@@ -180,6 +198,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'.src/assets/Real Fruit Bubble Tea.png'
   },
   {
+    id: '19',
     name: 'Subway',
     address: '3003 Danforth Ave #47, Toronto, ON M4C 1M9',
     phoneNumber: '(416)693-9018',
@@ -190,6 +209,7 @@ export const debugHardcodedRestaurantData = [
     imgLink:'src/assets/Subway.png'
   },
   {
+    id: '20',
     name: 'Starbucks',
     address: '604 Danforth Ave, Toronto, ON M4K 1R1',
     phoneNumber: '(416)693-9018',

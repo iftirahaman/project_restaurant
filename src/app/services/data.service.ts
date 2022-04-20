@@ -20,10 +20,10 @@ export class RestaurantService {
   public restaurants: Restaurant[] = debugHardcodedRestaurantData;
   public navRestaurant: any;
 
-  constructor() { }
+  constructor() {}
 
   public getRestaurants(): Restaurant[]{
-    return  this.restaurants;
+    return this.restaurants;
   }
 
   public getRestaurantByName(name: string): Restaurant{
@@ -34,12 +34,12 @@ export class RestaurantService {
     return this.restaurants[tags];
   }
 
-  public setNavRestaurant(restaurant){
-    this.navRestaurant = restaurant
+  public setNavRestaurant(restaurant: Restaurant){
+    this.navRestaurant = restaurant;
   }
 
   public getNavRestaurant(){
-    return this.navRestaurant
+    return this.navRestaurant;
   }
 
   // public changeAdded(added: boolean, name: string): Restaurant{
