@@ -15,7 +15,7 @@
     <ion-icon name="add-outline" slot="end" [routerLink]="['/add-restaurant']"></ion-icon>
     <ion-label><h1>Restaurant List</h1></ion-label>
   </ion-item>
-  <ion-searchbar animated></ion-searchbar>
+  <ion-searchbar [formControl]="searchField" [animated></ion-searchbar>
   <ion-list >
     <ion-item *ngFor="let res of addedRestaurants" >
       <ion-label class="ion-text-wrap" (click)="directDetail(res)">
@@ -28,7 +28,7 @@
       <ion-button (click)="directEdit(res)">
         <ion-icon name="pencil-sharp" slot="icon-only" ></ion-icon>
       </ion-button>
-      <ion-button >
+      <ion-button (click)="deleteRestaurant(res)">
         <ion-icon name="trash" slot="icon-only" ></ion-icon>
       </ion-button>
     </ion-item>

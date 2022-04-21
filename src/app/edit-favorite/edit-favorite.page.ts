@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RatingComponent } from '../rating/rating.component';
+import { Router } from '@angular/router';
 import { RestaurantService, Restaurant } from '../services/data.service';
 import { StorageService } from '../services/restauraunt/storage.service';
 @Component({
@@ -8,15 +8,10 @@ import { StorageService } from '../services/restauraunt/storage.service';
   styleUrls: ['./edit-favorite.page.scss'],
 })
 export class EditFavoritePage implements OnInit {
+  restaurant: Restaurant;
 
-  restaurant: any;
-  
-
-  constructor(
-    private restaurantService: RestaurantService,
-    private storageService: StorageService
-  ) { 
-    this.restaurant = this.restaurantService.getNavRestaurant()
+  constructor(private restaurantService: RestaurantService, private storageService: StorageService, private route: Router) {
+    this.restaurant = this.restaurantService.getNavRestaurant();
   }
 
   async addRestaurant(restaurant: Restaurant, description: string, rating: number) {
@@ -24,10 +19,9 @@ export class EditFavoritePage implements OnInit {
     restaurant.rating = rating;
     restaurant.description = description;
     this.storageService.set(restaurant.id, restaurant);
-    console.log(restaurant);
+    this.route.navigate(['/home']);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

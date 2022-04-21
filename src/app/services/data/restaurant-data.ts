@@ -19,7 +19,7 @@ export const debugHardcodedRestaurantData = [
     description: 'Self service restaurant',
     tags: ['Chinese'],
     rating: 4,
-    added: true,
+    added: false,
     imgLink:'./assets/Big Mao.png',
     mapLink:"https://maps.google.com/maps?q=5519%20Yonge%20St,%20North%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
   },
@@ -31,7 +31,7 @@ export const debugHardcodedRestaurantData = [
     description: 'The traditional flavors of Thailand appear at this casual chain dining room with a funky vibe.',
     tags: ['Thai'],
     rating: 2,
-    added: true,
+    added: false,
     imgLink:'./assets/EAT BKK Thai Kitchen.png',
     mapLink: "https://maps.google.com/maps?q=4704%20Yonge%20St,%20North%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
   },
@@ -175,7 +175,7 @@ export const debugHardcodedRestaurantData = [
     description: 'A fried chicken restuarant',
     tags: ['Chicken','Burger','Fries'],
     rating: 4,
-    added: true,
+    added: false,
     imgLink:'./assets/Chesters Fried Chicken.png',
     mapLink: "https://maps.google.com/maps?q=Centre,%2045%20Overlea%20Blvd,%20Toronto&t=&z=13&ie=UTF8&iwloc=&output=embed"
   },

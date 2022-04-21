@@ -24,7 +24,7 @@
           placeholder="Street Address"
           [(ngModel)]="address"
         ></ion-input>
-        
+
 
         <ion-row>
           <ion-col size="6">
@@ -36,7 +36,7 @@
             ></ion-input>
           </ion-col>
           <ion-col size="6">
-            
+
           </ion-col>
         </ion-row>
 
@@ -56,8 +56,8 @@
             <rating></rating>
           </ion-col>
         </ion-row>
-        
-        
+
+
         <ion-item>
           <ion-label position="floating">Description</ion-label>
           <ion-textarea
@@ -69,7 +69,7 @@
         <ion-button
           fill="solid"
           shape="round"
-          (click)="addRestaurant(res, name,address,phoneNumber,description,3,tags)"
+          (click)="addRestaurant(name, address, phoneNumber, description, 3, tags)"
         >
           <ion-icon slot="start" name="save"></ion-icon> Save
         </ion-button>
