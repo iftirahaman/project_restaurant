@@ -10,50 +10,36 @@ import { Restaurant, RestaurantService } from '../services/data.service';
 export class RestaurantDetailPage implements OnInit {
 
   restaurant: Restaurant;
+  title = 'Restaurant Navigator';
+  latitude: number;
+  longitude: number;
+  zoom: number;
 
-  constructor(
-    private restaurantService: RestaurantService,
-    private emailComposer: EmailComposer,
-    private socialSharing: SocialSharing
-  ) {
+  constructor(private restaurantService: RestaurantService, private emailComposer: EmailComposer, private socialSharing: SocialSharing) {
     this.restaurant = this.restaurantService.getNavRestaurant();
   }
 
-  // shareViaEmail(name, address){
-  //   let email={
-  //     to: 'mybestfriend@friend.com',
-  //     subject: name+ ' is the best restaurant!',
-  //     body: 'You have to come to '+address+', and try this restaurant!'
-  //   }
+  ngOnInit() {
+    this.setCurrentLocation();
+  }
 
-  //   this.emailComposer.open(email);
-  // };
-
-  // shareViaTwitter(name, address){
-  //   this.socialSharing.shareViaTwitter(
-  //     'Come to ' + name + ', at ' + address
-  //   ).then(() =>{
-
-  //   }).catch(e=>{
-
-  //   })
-  // };
-
-  share(name, address){
+  share(name: string, address: string){
     this.socialSharing.share(
       'Come to ' + name + ', at ' + address
     ).then(() =>{
 
     }).catch(e=>{
 
-    })
+    });
   };
 
-  ngOnInit() {
+  private setCurrentLocation() {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.zoom = 15;
+      });
+    }
   }
-
-
-
-
-
 }

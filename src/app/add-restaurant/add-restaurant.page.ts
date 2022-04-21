@@ -16,14 +16,6 @@ export class AddRestaurantPage implements OnInit {
     return this.restaurantService.getRestaurants();
   }
 
-  async addRestaurant(restaurant: Restaurant) {
-    restaurant.added = true;
-    this.storageService.set(restaurant.id, restaurant);
-    // restaurant.added = true;
-    this.router.navigate(['']);
-    console.log(restaurant);
-  }
-
   directEdit(restaurant: Restaurant){
     this.restaurantService.setNavRestaurant(restaurant);
     this.router.navigate(['/edit-favorite']);

@@ -8,8 +8,11 @@
 </ion-header>
 
 <ion-content *ngIf="restaurant">
-
-  <img src={{restaurant.imgLink}} style="width:300px;height:300px"/>
+  <div class="container">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+  </div>
   <h2>{{ restaurant.name }}</h2>
   <h3>{{ restaurant.address }}</h3>
   <h3>{{ restaurant.phoneNumber }}</h3>
@@ -17,7 +20,7 @@
   <h3>{{ restaurant.description }}</h3>
   <small *ngFor="let tag of restaurant.tags">#{{tag}}&nbsp;</small>
 
-  <div class="mapouter"><div class="gmap_canvas"><iframe width="50%" height="50%" id="gmap_canvas" [src]= "restaurant.mapLink | safe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:left;height:250px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+  <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="50%" height="50%" id="gmap_canvas" [src]= "restaurant.mapLink | safe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:left;height:250px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div> -->
   <h1>
     <ion-button (click)="share(restaurant.name,restaurant.address)">
       <ion-icon name="logo-facebook" slot="icon-only"></ion-icon>
@@ -29,4 +32,5 @@
       <ion-icon name="mail-sharp" slot="icon-only"></ion-icon>
     </ion-button>
   </h1>
+  <img src={{restaurant.imgLink}} style="width:300px;height:300px"/>
 </ion-content>

@@ -9,6 +9,8 @@ import { RestaurantDetailPageRoutingModule } from './restaurant-detail-routing.m
 import { RestaurantDetailPage } from './restaurant-detail.page';
 import { ShowRatingComponent } from '../show-rating/show-rating.component';
 import { SharedPipesModule } from '../safe.module';
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +18,10 @@ import { SharedPipesModule } from '../safe.module';
     ReactiveFormsModule,
     IonicModule,
     RestaurantDetailPageRoutingModule,
-    SharedPipesModule
+    SharedPipesModule, AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD-hObkD4fYVXSnatnJnAvpQAS9uHzPTvE',
+      libraries: ['']
+    }),
   ],
   declarations: [RestaurantDetailPage, ShowRatingComponent]
 })
