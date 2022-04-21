@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Restaurant, RestaurantService } from '../services/data.service';
-
+import { StorageService } from '../services/restauraunt/storage.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -11,7 +11,8 @@ export class HomePage implements OnInit{
   restaurants = this.restaurantService.getRestaurants();
   addedRestaurants = [];
 
-  constructor(private route: Router, private restaurantService: RestaurantService) {
+  constructor(private route: Router, private restaurantService: RestaurantService,private storageService: StorageService) {
+    console.log(this.storageService.getAllKeys())
     for (const restaurant of this.restaurants) {
       if (restaurant.added) {
         this.addedRestaurants.push(restaurant);
@@ -34,10 +35,5 @@ export class HomePage implements OnInit{
     this.restaurantService.setNavRestaurant(restaurant);
     this.route.navigate(['/restaurant-detail']);
   }
-
-
-  // updateAdded(added, name){
-  //   this.restaurantService.changeAdded(added,name)
-  // }
 
 }

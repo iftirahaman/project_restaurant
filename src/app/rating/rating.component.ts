@@ -1,5 +1,4 @@
 import { Component, Input, EventEmitter ,Output, OnInit} from "@angular/core";
-
 @Component({
   selector: "rating",
   templateUrl: "./rating.component.html"
@@ -7,8 +6,7 @@ import { Component, Input, EventEmitter ,Output, OnInit} from "@angular/core";
 export class RatingComponent implements OnInit{
   @Input() rating: number ;
 
-  @Output() ratingChange: EventEmitter<number> = new EventEmitter();;
-
+  @Output() ratingChange: EventEmitter<number> = new EventEmitter();
   ngOnInit() {}
 
   constructor() {}
@@ -38,10 +36,6 @@ export class RatingComponent implements OnInit{
 
   isAboveRating(index: number): boolean {
     return index > this.rating
-  }
-
-  getRate(){
-    return this.rating;
   }
 }
 

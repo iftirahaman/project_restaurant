@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'edit-favorite',
     loadChildren: () => import('./edit-favorite/edit-favorite.module').then( m => m.EditFavoritePageModule)
+  },  {
+    path: 'custom-restaurant',
+    loadChildren: () => import('./custom-restaurant/custom-restaurant.module').then( m => m.CustomRestaurantPageModule)
   },
+
 ];
 
 @NgModule({

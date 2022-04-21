@@ -10,9 +10,13 @@ import { StorageService } from '../services/restauraunt/storage.service';
 export class EditFavoritePage implements OnInit {
 
   restaurant: any;
+  
 
-  constructor(private restaurantService: RestaurantService, private storageService: StorageService) {
-    this.restaurant = this.restaurantService.getNavRestaurant();
+  constructor(
+    private restaurantService: RestaurantService,
+    private storageService: StorageService
+  ) { 
+    this.restaurant = this.restaurantService.getNavRestaurant()
   }
 
   async addRestaurant(restaurant: Restaurant, description: string, rating: number) {
