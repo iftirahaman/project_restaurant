@@ -8,5 +8,4 @@ import { SafePipe } from './safe.pipe';
         SafePipe
     ]
 })
-export class SharedPipesModule {
-}
+export class SharedPipesModule {}
