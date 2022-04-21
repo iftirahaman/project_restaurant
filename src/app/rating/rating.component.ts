@@ -14,6 +14,7 @@ export class RatingComponent implements OnInit{
   rate(index: number) {
       this.rating = index;
       this.ratingChange.emit(this.rating)
+      window.localStorage.setItem("rate",this.rating.toString())
    }
 
   getColor(index: number) {

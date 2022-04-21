@@ -9,17 +9,18 @@ import { StorageService } from '../services/restauraunt/storage.service';
 })
 export class EditFavoritePage implements OnInit {
   restaurant: Restaurant;
+  rate: any;
 
   constructor(private restaurantService: RestaurantService, private storageService: StorageService, private route: Router) {
     this.restaurant = this.restaurantService.getNavRestaurant();
+    this.rate = window.localStorage.getItem("rate")
   }
 
-  async addRestaurant(restaurant: Restaurant, description: string, rating: number) {
+  addRestaurant(restaurant: Restaurant, description: string) {
     restaurant.added = true;
-    restaurant.rating = rating;
+    restaurant.rating = parseInt(this.rate);
     restaurant.description = description;
     this.storageService.set(restaurant.id, restaurant);
-    this.route.navigate(['/home']);
   }
 
   ngOnInit() {}
